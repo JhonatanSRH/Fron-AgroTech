@@ -1,0 +1,159 @@
+<div class="wrapper">
+    <div class="page-header section-dark" style="background-image: url('assets/img/evening-storm-clouds-clouds-sky-arable-cornfield.jpg')">
+
+        <div class="container">
+            <h3 class="title"></h3>
+            <form (ngSubmit)="onSubmit()" #cargaBoleteriaIngresoForm="ngForm">
+                <br>
+                <br>
+
+
+
+                <br>
+                <div>
+                    <table class="table">
+                        <caption hidden>table</caption>
+                        <thead class="thead-light">
+                            <th scope="col">Nombre del cultivo</th>
+                            <th scope="col">Descripción</th>
+                        </thead>
+                        <tbody>
+                            <td>
+                                <div class="form-group">
+                                    <label for="nombreEvento" style="color:white">{{nombre_cultivo}}</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <label for="nombreEvento2" style="color:white">{{descripcion_cultivo}}</label>
+                                </div>
+                            </td>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <p style="color:white">Información técnica</p>
+                <div>
+                    <table class="table">
+                        <caption hidden>table</caption>
+                        <thead class="thead-light">
+                            <th scope="col">Temperatura °</th>
+                            <th scope="col">Departamento</th>
+                            <th scope="col">municipio</th>
+                            <th scope="col">Edad para cosechar</th>
+                            <th scope="col">Densidad de cultivo</th>
+                        </thead>
+                        <tbody>
+                            <td>
+                                <div class="form-group">
+                                    <label for="temperatura" style="color:white">{{numero_temperatura}}</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <label for="departamento" style="color:white">{{nombre_departamento}}</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <label for="municipio" style="color:white">{{nombre_municipio}}</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <label for="edad" style="color:white">{{edad_cosecha}}</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <label for="densidad" style="color:white">{{densidad_cultivo}}</label>
+                                </div>
+                            </td>
+                        </tbody>
+                    </table>
+                </div>
+                <br>
+                <!--<p style="color:white">Productos necesarios para cultivar</p>
+                <div>
+                    <table class="table">
+                        <caption hidden>table</caption>
+                        <thead class="thead-light">
+                            <th scope="col">Productos necesarios para cultivar</th>
+                        </thead>
+                        <tbody>
+
+                            <td>
+                                <div class="form-group">
+                                    <a class="btn btn-primary" (click)="agregarProductos()">Agregar Producto</a>
+                                </div>
+
+                                <div formArrayName="productos"
+                                    *ngFor="let producto of productos.controls; let i = index">
+                                    <div [formGroupName]="i">
+                                        <div class="form-group row">
+                                            <label class="col-md-1" [attr.for]="'producto' + i" style="color:white">Producto</label>
+                                            <div class="col-md-3">
+                                                <input type="text" [attr.id]="'producto' + i" class="form-control"
+                                                    formControlName="telefono">
+                                            </div>
+                                            <label class="col-md-1" [attr.for]="'descripcion' + i" style="color:white">Descripción</label>
+                                            <div class="col-md-5">
+                                                <input type="text" [attr.id]="'descripcion' + i" class="form-control"
+                                                    formControlName="descripcion">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button class="btn btn-danger"
+                                                    (click)="removerProducto(i)">Remover</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!--<p style="color:white">Actividades para la cultivación</p>
+                <div>
+                    <table class="table">
+                        <caption hidden>table</caption>
+                        <thead class="thead-light">
+                            <th scope="col">Actividades para la cultivación</th>
+                        </thead>
+                        <tbody>
+
+                            <td>
+                                <div class="form-group">
+                                    <a class="btn btn-primary" (click)="agregarActividades()">Agregar Actividad</a>
+                                </div>
+
+                                <div formArrayName="actividades"
+                                    *ngFor="let actividad of actividades.controls; let i = index">
+                                    <div [formGroupName]="i">
+                                        <div class="form-group row">
+                                            <label class="col-md-1" [attr.for]="'actividad' + i" style="color:white">Actividad</label>
+                                            <div class="col-md-3">
+                                                <input type="text" [attr.id]="'actividad' + i" class="form-control"
+                                                    formControlName="actividad">
+                                            </div>
+                                            <label class="col-md-1" [attr.for]="'descripcion' + i" style="color:white">Descripción</label>
+                                            <div class="col-md-5">
+                                                <input type="text" [attr.id]="'descripcion' + i" class="form-control"
+                                                    formControlName="descripcion2">
+                                            </div>
+                                            <div class="col-md-2">
+                                                <button class="btn btn-danger"
+                                                    (click)="removerActividades(i)">Remover</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tbody>
+                    </table>
+                </div>-->
+            </form>
+        </div>
+    </div>
+</div>

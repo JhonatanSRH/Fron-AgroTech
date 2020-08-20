@@ -1,0 +1,34 @@
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+    <h3 class="title">Lista de Blogs</h3>
+
+    <!--<input type="submit" value="Buscar" (click)="loadEventos()" class="btn btn-primary">-->
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Blogs</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let post of posts">
+                <td>{{post.nombre_cultivo }}</td>
+                <td>
+                    <div class="float-right mx-4"  (click)="delete(post)" *ngIf="login">
+                        <i class="fa fa-trash-o" aria-hidden="true" style="color:orangered"></i>
+                        <!--<svg-icon src="{{rutaDelete}}" [svgStyle]="{ 'width.px':20 }"></svg-icon>-->
+                    </div>   
+
+                    <div class="float-right mx-4" (click)="funcionByEvento(post)" >
+                        <i class="fa fa-list" aria-hidden="true" style="color:orangered"></i>
+                        <!--<svg-icon src="{{rutaList}}" [svgStyle]="{ 'width.px':20 }"></svg-icon>-->
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
